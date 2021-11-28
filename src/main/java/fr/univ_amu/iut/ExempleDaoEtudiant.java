@@ -45,12 +45,11 @@ public class ExempleDaoEtudiant {
                 etu.setVilleEt(resultSet.getString("VILLE_ET"));
                 etu.setAnnee(resultSet.getInt("ANNEE"));
                 etu.setGroupe(resultSet.getInt("GROUPE"));
-
-                etu = Dao.insert(etu);
-    
+                
                 System.out.println(etu.toString());
-    
+                etu = Dao.insert(etu);
                 boolean updateOK = Dao.update(etu);
+    
             }
 
             // Fermeture de l'instruction (liberation des ressources)
