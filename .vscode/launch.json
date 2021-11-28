@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch ExempleConnexion",
+      "request": "launch",
+      "mainClass": "fr.univ_amu.iut.JDBC.ExempleConnexion",
+      "projectName": "M3106_TpJDBC"
+    },
+    {
+      "type": "java",
       "name": "Launch App",
       "request": "launch",
       "cwd": "${workspaceFolder}",

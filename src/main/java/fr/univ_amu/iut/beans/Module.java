@@ -1,6 +1,8 @@
 package fr.univ_amu.iut.beans;
 
-public class Module {
+import java.io.Serializable;
+
+public class Module implements Serializable {
     private String code;
     private String libelle;
     private int hCoursPrev;
@@ -115,4 +117,73 @@ public class Module {
                 + (responsable != null ? "responsable=" + responsable.getNomProf() + ", " : "")
                 + (pere != null ? "pere=" + pere.getCode() : "") + "]";
     }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((code == null) ? 0 : code.hashCode());
+        result = prime * result + coefCc;
+        result = prime * result + coefTest;
+        result = prime * result + ((discipline == null) ? 0 : discipline.hashCode());
+        result = prime * result + hCoursPrev;
+        result = prime * result + hCoursRea;
+        result = prime * result + hTpPrev;
+        result = prime * result + hTpRea;
+        result = prime * result + ((libelle == null) ? 0 : libelle.hashCode());
+        result = prime * result + ((pere == null) ? 0 : pere.hashCode());
+        result = prime * result + ((responsable == null) ? 0 : responsable.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Module other = (Module) obj;
+        if (code == null) {
+            if (other.code != null)
+                return false;
+        } else if (!code.equals(other.code))
+            return false;
+        if (coefCc != other.coefCc)
+            return false;
+        if (coefTest != other.coefTest)
+            return false;
+        if (discipline == null) {
+            if (other.discipline != null)
+                return false;
+        } else if (!discipline.equals(other.discipline))
+            return false;
+        if (hCoursPrev != other.hCoursPrev)
+            return false;
+        if (hCoursRea != other.hCoursRea)
+            return false;
+        if (hTpPrev != other.hTpPrev)
+            return false;
+        if (hTpRea != other.hTpRea)
+            return false;
+        if (libelle == null) {
+            if (other.libelle != null)
+                return false;
+        } else if (!libelle.equals(other.libelle))
+            return false;
+        if (pere == null) {
+            if (other.pere != null)
+                return false;
+        } else if (!pere.equals(other.pere))
+            return false;
+        if (responsable == null) {
+            if (other.responsable != null)
+                return false;
+        } else if (!responsable.equals(other.responsable))
+            return false;
+        return true;
+    }
+
+    
 }

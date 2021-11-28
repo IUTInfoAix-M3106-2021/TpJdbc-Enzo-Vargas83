@@ -3,16 +3,24 @@ package fr.univ_amu.iut.DAO.JDBC;
 import fr.univ_amu.iut.DAO.DAOEtudiant;
 import fr.univ_amu.iut.JDBC.ResultSetStreamer;
 import fr.univ_amu.iut.JDBC.RowMappers.EtudiantMapper;
+import fr.univ_amu.iut.ConnexionUnique;
 import fr.univ_amu.iut.beans.Etudiant;
 
 import java.sql.Connection;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.sql.SQLException;
 
 public final class DAOEtudiantJDBC implements DAOEtudiant {
     private Connection connection;
 
-    DAOEtudiantJDBC() {
+    public DAOEtudiantJDBC() {
+        try{
+            this.connection = ConnexionUnique.getInstance().getConnection();
+            System.out.println("Connecte\n");
+        } catch (SQLException e){
+            //
+        }
     }
 
     @Override
