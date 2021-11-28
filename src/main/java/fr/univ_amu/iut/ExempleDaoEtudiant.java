@@ -8,6 +8,7 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.*;
 
+import fr.univ_amu.iut.beans.Etudiant;
 
 import fr.univ_amu.iut.beans.Etudiant;
 import fr.univ_amu.iut.DAO.DAOEtudiant;
