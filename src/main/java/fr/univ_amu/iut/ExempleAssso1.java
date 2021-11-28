@@ -49,8 +49,10 @@ public static void main(String[] args) throws SQLException {
                     prof.setMatSpec(sp);
 
                     ListEns.add(prof);
-                    System.out.println(prof.toString() + " est spécialiser en : " + prof.getMatSpec().toString());
+                    
+                    System.out.println(prof.toString());
         }
+                    
 
         // Fermeture de l'instruction (liberation des ressources)
         statement.close();
