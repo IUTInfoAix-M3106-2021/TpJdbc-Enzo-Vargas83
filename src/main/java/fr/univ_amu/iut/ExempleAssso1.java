@@ -40,7 +40,7 @@ public static void main(String[] args) throws SQLException {
                     prof.setNumProf(resultSet.getInt("NUM_PROF"));
                     prof.setNomProf(resultSet.getString("NOM_PROF"));
                     prof.setPrenomProf(resultSet.getString("PRENOM_PROF"));
-                    prof.setCpProf(resultSet.getString("CP_ET"));
+                    prof.setCpProf(resultSet.getString("CP_PROF"));
                     prof.setVilleProf(resultSet.getString("VILLE_PROF"));
                     prof.setAdrProf(resultSet.getString("ADR_PROF"));
 
