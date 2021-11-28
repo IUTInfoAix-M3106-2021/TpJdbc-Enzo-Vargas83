@@ -14,7 +14,7 @@ import fr.univ_amu.iut.beans.Module;
 
 public class ExempleAssso1 {
 
-    private static final String reqEtudiantsAixois =
+    private static final String reqProfesseursAixois =
     "SELECT NUM_PROF, NOM_PROF, PRENOM_PROF, CP_PROF, VILLE_PROF, ADR_PROF, MAT_SPEC  " +
             "FROM PROF " +
             "WHERE VILLE_PROF = 'AIX-EN-PROVENCE'";
@@ -28,8 +28,8 @@ public static void main(String[] args) throws SQLException {
         Statement statement = conn.createStatement();
         
         // Execution de la requete
-        System.out.println("Execution de la requete : " + reqEtudiantsAixois);
-        ResultSet resultSet = statement.executeQuery(reqEtudiantsAixois);
+        System.out.println("Execution de la requete : " + reqProfesseursAixois);
+        ResultSet resultSet = statement.executeQuery(reqProfesseursAixois);
         
         // Affichage du resultat
         ArrayList<Prof> ListEns = new ArrayList<Prof>();
