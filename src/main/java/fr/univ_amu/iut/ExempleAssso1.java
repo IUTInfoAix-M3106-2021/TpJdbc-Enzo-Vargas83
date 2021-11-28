@@ -49,7 +49,7 @@ public static void main(String[] args) throws SQLException {
                     prof.setMatSpec(sp);
 
                     ListEns.add(prof);
-                    
+
                     System.out.println(prof.toString());
         }
                     
@@ -62,4 +62,5 @@ public static void main(String[] args) throws SQLException {
         System.out.println(e.getMessage() + "\n");
     }
         
+ }
 }
