@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public final class DAOEtudiantJDBC implements DAOEtudiant {
     private Connection connection;
 
-    DAOEtudiantJDBC() {
+    public DAOEtudiantJDBC() {
     }
 
     @Override
